@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from "next/link";
 
 const Header = () => {
@@ -8,7 +8,7 @@ const Header = () => {
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-4">
           <Link href="#" className="flex items-center">
             <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
-              MediSync
+              MediChain
             </span>
           </Link>
           <div className="flex items-center lg:order-2">
@@ -105,7 +105,9 @@ const HeroSection = () => {
             Effortless Reports Tracking
           </h2>
           <p className="mb-8 text-center text-base text-indigo-200 md:text-lg">
-          One of the centralized hospital management system that securely stores patient records in a journey format, ensuring privacy, accessibility, and streamlined hospital operations
+            One of the centralized hospital management system that securely
+            stores patient records in a journey format, ensuring privacy,
+            accessibility, and streamlined hospital operations
           </p>
           {/* <Link
             href="/add"

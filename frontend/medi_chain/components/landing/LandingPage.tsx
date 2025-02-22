@@ -1,40 +1,43 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+"use client";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    company: "MediSync",
-    quote: "Secure & Decentralized: Ensuring privacy and seamless access to medical records.",
+    company: "MediChain",
+    quote:
+      "Secure & Decentralized: Ensuring privacy and seamless access to medical records.",
     name: "Sanidhya Madhesia",
-    position: "Team lead"
+    position: "Team lead",
   },
   {
-    company: "MediSync",
-    quote: "Efficient Management: Streamlined hospital operations with a user-friendly interface!",
+    company: "MediChain",
+    quote:
+      "Efficient Management: Streamlined hospital operations with a user-friendly interface!",
     name: "Sarthak Singh",
-    position: "Operations Head"
+    position: "Operations Head",
   },
   {
-    company: "MediSync",
-    quote: "Innovative Solutions: Cutting-edge technology for improved patient care!",
+    company: "MediChain",
+    quote:
+      "Innovative Solutions: Cutting-edge technology for improved patient care!",
     name: "Dhruv Tiwari",
-    position: "CodeBase member"
-  }
+    position: "CodeBase member",
+  },
 ];
 
 const LandingPage = () => {
   const [colorToggle, setColorToggle] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [progress, setProgress] = useState(100);
-  const [barColor, setBarColor] = useState('black');
+  const [barColor, setBarColor] = useState("black");
 
   useEffect(() => {
     const interval = setInterval(() => {
       setColorToggle((prev) => !prev);
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
       setProgress(100); // Reset progress to full
-      setBarColor('black'); // Reset bar color to black
+      setBarColor("black"); // Reset bar color to black
     }, 6000); // Changes every 6 seconds
 
     return () => clearInterval(interval);
@@ -45,9 +48,9 @@ const LandingPage = () => {
       setProgress((prev) => {
         while (prev > 0) {
           return prev - 1; // Decrease to reach 0 in 6 sec
-        } 
-          setBarColor('white'); // Change bar color when it reaches zero
-          return 0;
+        }
+        setBarColor("white"); // Change bar color when it reaches zero
+        return 0;
       });
     }, 100);
 
@@ -59,9 +62,10 @@ const LandingPage = () => {
       <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-12">
         {/* Left Side - Title & Progress Bar */}
         <div className="md:w-1/2 flex flex-col items-start">
-          <h2 className="text-4xl font-bold text-black mb-6">Who are we?  </h2>
+          <h2 className="text-4xl font-bold text-black mb-6">Who are we? </h2>
           <p className="text-gray-500 mb-8">
-            Trusted by top brands, our system ensures secure and seamless hospital management.
+            Trusted by top brands, our system ensures secure and seamless
+            hospital management.
           </p>
           {/* Progress Bar */}
           <div className="w-full h-2 bg-gray-300 mt-4 rounded-full overflow-hidden">
@@ -76,7 +80,10 @@ const LandingPage = () => {
 
         {/* Right Side - Testimonial Box */}
         <motion.div
-          animate={{ backgroundColor: colorToggle ? '#ffffff' : '#000000', color: colorToggle ? '#000000' : '#ffffff' }}
+          animate={{
+            backgroundColor: colorToggle ? "#ffffff" : "#000000",
+            color: colorToggle ? "#000000" : "#ffffff",
+          }}
           transition={{ duration: 1 }}
           className="md:w-1/2 p-8 rounded-lg shadow-lg min-h-[250px] flex flex-col justify-between"
         >
@@ -90,7 +97,9 @@ const LandingPage = () => {
           </div>
           <div className="mt-6">
             <p className="font-bold">{testimonials[currentTestimonial].name}</p>
-            <p className="text-sm">{testimonials[currentTestimonial].position}</p>
+            <p className="text-sm">
+              {testimonials[currentTestimonial].position}
+            </p>
           </div>
         </motion.div>
       </div>
