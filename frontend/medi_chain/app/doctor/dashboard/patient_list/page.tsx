@@ -50,7 +50,7 @@ export default function MyPatientsPage() {
                 <p className="text-gray-700">
                   Last Visit: {formatDate(patient.lastVisit)}
                 </p>
-                <Link href={`/doctor/dashboard/patient_list/${patient.id}`}>
+                <Link href={`/doctor/dashboard/patient_list/patient_info`}>
                   <Button className="bg-indigo-700">View Details</Button>
                 </Link>
               </CardContent>

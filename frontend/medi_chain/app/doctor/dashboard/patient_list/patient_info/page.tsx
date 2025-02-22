@@ -34,17 +34,11 @@ const formatDate = (dateString: string | null) => {
   });
 };
 
-export default function PatientMedicalReports({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default function PatientMedicalReports() {
   return (
     <ContentLayout title="Patient Report">
       <div className="container mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">
-          Medical Report for Patient #{params.id}
-        </h1>
+        <h1 className="text-2xl font-bold mb-4">Medical Report for Patient</h1>
         <div className="space-y-4">
           {patientReports
             .sort(
@@ -91,7 +85,7 @@ export default function PatientMedicalReports({
                   {/* View Details Button */}
                   <div className="ml-auto">
                     <Link
-                      href={`/doctor/dashboard/patient_list/${params.id}/condition/${report.id}`}
+                      href={`/doctor/dashboard/patient_list/patient_info/condition_info/`}
                     >
                       <Button className="bg-indigo-700">View Details</Button>
                     </Link>
