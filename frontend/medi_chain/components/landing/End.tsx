@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center mt-6"></div>
           <div className="text-center text-sm text-white border-t pt-6">
-            ExpertSquad © 2025. All Rights Reserved.
+            MediChain © 2025. All Rights Reserved.
           </div>
         </div>
       </footer>
