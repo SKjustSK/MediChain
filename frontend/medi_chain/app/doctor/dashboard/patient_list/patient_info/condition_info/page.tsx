@@ -101,9 +101,7 @@ export default function MedicalConditionPage() {
   return (
     <ContentLayout title="Condition Details">
       <div className="container mx-auto p-6">
-        <h1 className="text-3xl font-bold mb-6">
-          Patient Name - {conditionDetails.disease}
-        </h1>
+        <h1 className="text-3xl font-bold mb-6">{conditionDetails.disease}</h1>
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="mb-6">
             <TabsTrigger value="details">Details</TabsTrigger>

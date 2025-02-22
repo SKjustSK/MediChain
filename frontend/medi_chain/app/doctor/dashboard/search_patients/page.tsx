@@ -101,7 +101,7 @@ export default function SearchPatientPage() {
   return (
     <ContentLayout title="Search Patients">
       <div className="container mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">Patient Search</h1>
+        <h1 className="text-2xl font-bold mb-4">Search Patients</h1>
         <div className="flex space-x-2 mb-4">
           <Input
             type="text"

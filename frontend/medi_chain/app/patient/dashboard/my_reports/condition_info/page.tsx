@@ -62,10 +62,8 @@ function TimelineItem({ date, event, onEdit, onDelete }: TimelineItemProps) {
       <div className="flex-shrink-0 w-24 text-sm text-gray-600 font-medium">
         {formatDate(date)}
       </div>
-      <div className="relative flex items-center">
-        <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
-        <div className="w-px bg-gray-300 h-12 mx-4"></div>
-      </div>
+      {/* <div className="w-2 h-2 bg-gray-500 rounded-full"></div> */}
+      <div className="w-px bg-gray-300 h-6 mx-4"></div>
       <div className="flex-grow text-gray-800">{event}</div>
       <div className="opacity-0 group-hover:opacity-100 transition-opacity ml-4 flex gap-2">
         <Button variant="ghost" size="icon" onClick={onEdit}>
@@ -101,9 +99,7 @@ export default function MedicalConditionPage() {
   return (
     <ContentLayout title="Condition Details">
       <div className="container mx-auto p-6">
-        <h1 className="text-3xl font-bold mb-6">
-          Patient Name - {conditionDetails.disease}
-        </h1>
+        <h1 className="text-3xl font-bold mb-6">{conditionDetails.disease}</h1>
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="mb-6">
             <TabsTrigger value="details">Details</TabsTrigger>

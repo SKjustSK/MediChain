@@ -39,7 +39,7 @@ export default function MyPatientsPage() {
         <h1 className="text-2xl font-bold mb-4">My Patients</h1>
         <div className="flex flex-col gap-4">
           {patients.map((patient) => (
-            <Card key={patient.id} className="">
+            <Card key={patient.id} className="p-2">
               <CardHeader className="pb-2">
                 <CardTitle>{patient.name}</CardTitle>
                 <p className="text-sm text-gray-600">

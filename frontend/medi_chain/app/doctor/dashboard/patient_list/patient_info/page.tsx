@@ -36,9 +36,9 @@ const formatDate = (dateString: string | null) => {
 
 export default function PatientMedicalReports() {
   return (
-    <ContentLayout title="Patient Report">
+    <ContentLayout title="Patient Medical Report">
       <div className="container mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">Medical Report for Patient</h1>
+        <h1 className="text-2xl font-bold mb-4">Patient Medical Report</h1>
         <div className="space-y-4">
           {patientReports
             .sort(
@@ -56,7 +56,7 @@ export default function PatientMedicalReports() {
                       {formatDate(report.startDate)}
                     </div>
                     {/* Vertical Line */}
-                    <div className="h-12 w-0.5 bg-gray-300 my-1 relative">
+                    <div className="h-6 w-0.5 bg-gray-300 my-1 relative">
                       <ArrowDownIcon className="absolute -bottom-4 -left-1.5 w-4 h-2 text-gray-500" />
                     </div>
                     {/* End Date */}
