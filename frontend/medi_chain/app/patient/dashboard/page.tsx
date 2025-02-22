@@ -34,7 +34,7 @@ const formatDate = (dateString: string | null) => {
   });
 };
 
-export default function PatientMedicalReports({
+export default function MedicalReportsPage({
   params,
 }: {
   params: { id: string };

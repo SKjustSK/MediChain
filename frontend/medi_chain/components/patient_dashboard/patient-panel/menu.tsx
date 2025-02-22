@@ -5,10 +5,10 @@ import { Ellipsis, LogOut } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import { getMenuList } from "@/lib/menu-list-doctor";
+import { getMenuList } from "@/lib/menu-list-patient";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { CollapseMenuButton } from "@/components/doctor_dashboard/doctor-panel/collapse-menu-button";
+import { CollapseMenuButton } from "@/components/patient_dashboard/patient-panel/collapse-menu-button";
 import {
   Tooltip,
   TooltipTrigger,
