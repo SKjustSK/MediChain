@@ -1,5 +1,4 @@
 "use client";
-
 import { Footer } from "@/components/patient_dashboard/patient-panel/footer";
 import { Sidebar } from "@/components/patient_dashboard/patient-panel/sidebar";
 import { useSidebar } from "@/hooks/use-sidebar";
@@ -31,7 +30,6 @@ export default function AdminPanelLayout({
           !settings.disabled && (!getOpenState() ? "lg:ml-[90px]" : "lg:ml-72")
         )}
       >
-        <Footer />
       </footer>
     </>
   );
