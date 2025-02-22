@@ -44,7 +44,11 @@ function PatientCard({ patient }: PatientCardProps) {
       <CardFooter>
         <Button
           className="bg-indigo-700"
-          onClick={() => alert("Requesting report access...")}
+          onClick={() => {
+            setTimeout(() => {
+              alert("Report Access sent");
+            }, 2000);
+          }}
         >
           Request Report Access
         </Button>
@@ -60,34 +64,10 @@ export default function SearchPatientPage() {
   const handleSearch = async () => {
     const patients = [
       {
-        id: "1",
+        id: "1234 5678 9012",
         name: "John Doe",
         adharNumber: "1234 5678 9012",
         dob: "1990-01-01",
-      },
-      {
-        id: "2",
-        name: "Jane Smith",
-        adharNumber: "2345 6789 0123",
-        dob: "1985-05-15",
-      },
-      {
-        id: "3",
-        name: "Alice Johnson",
-        adharNumber: "3456 7890 1234",
-        dob: "1992-09-30",
-      },
-      {
-        id: "4",
-        name: "Bob Williams",
-        adharNumber: "4567 8901 2345",
-        dob: "1988-03-22",
-      },
-      {
-        id: "5",
-        name: "Eva Brown",
-        adharNumber: "5678 9012 3456",
-        dob: "1995-11-10",
       },
     ];
     const filteredPatients = patients.filter(

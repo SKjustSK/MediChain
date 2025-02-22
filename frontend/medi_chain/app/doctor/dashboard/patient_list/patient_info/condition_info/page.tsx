@@ -89,12 +89,21 @@ export default function MedicalConditionPage() {
   const [editingTimeline, setEditingTimeline] = useState<number | null>(null);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [selectedDocument, setSelectedDocument] = useState<string | null>(null);
+  const [documents, setDocuments] = useState(conditionDetails.documents);
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      // Handle file upload logic here
-      console.log("Uploading file:", file);
+      // Create a URL for the uploaded file
+      const fileUrl = URL.createObjectURL(file);
+      // Add the new document to the documents list
+      const newDocument = {
+        id: documents.length + 1,
+        name: file.name,
+        type: file.name.split(".").pop() || "",
+        url: fileUrl,
+      };
+      setDocuments([...documents, newDocument]);
     }
   };
 
@@ -277,7 +286,7 @@ export default function MedicalConditionPage() {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-4">
-                  {conditionDetails.documents.map((doc) => (
+                  {documents.map((doc) => (
                     <li
                       key={doc.id}
                       className="flex items-center justify-between p-2 rounded-lg hover:bg-accent group"

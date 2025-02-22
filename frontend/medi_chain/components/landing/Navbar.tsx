@@ -56,18 +56,10 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  href="/add"
+                  href="/ai_medical_analysis/"
                   className="block border-b border-gray-700 py-2 pr-4 pl-3 text-gray-400 hover:bg-gray-700 hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
                 >
-                  Add Issue
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/add"
-                  className="block border-b border-gray-700 py-2 pr-4 pl-3 text-gray-400 hover:bg-gray-700 hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-white"
-                >
-                  Saved Issue
+                  AI Medical Analysis
                 </Link>
               </li>
               <li>
