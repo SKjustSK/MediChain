@@ -32,13 +32,13 @@ const Header = () => {
               </svg>
             </Link> */}
             <Link
-              href="/guest"
+              href="/patient/login"
               className="rounded-lg border-2 border-white px-4 py-2 text-sm leading-[24px] font-medium text-white hover:bg-gray-50 hover:text-gray-900 focus:ring-4 focus:ring-gray-300 focus:outline-none sm:mr-2 lg:px-5 lg:py-2.5 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
             >
-              Login as user
+              Login as patient
             </Link>
             <Link
-              href="/guest"
+              href="/doctor/login"
               className="rounded-lg border-2 border-white px-4 py-2 text-sm leading-[24px] font-medium text-white hover:bg-gray-50 hover:text-gray-900 focus:ring-4 focus:ring-gray-300 focus:outline-none sm:mr-2 lg:px-5 lg:py-2.5 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
             >
               Login as Doctor

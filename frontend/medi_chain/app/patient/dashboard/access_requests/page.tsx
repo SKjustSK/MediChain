@@ -56,9 +56,14 @@ export default function MyPatientsPage() {
                 <p className="text-gray-700">
                   Last Visit: {formatDate(patient.lastVisit)}
                 </p>
-                <Link href={`/doctor/dashboard/patient_list/${patient.id}`}>
-                  <Button className="bg-indigo-700">Give Access</Button>
-                </Link>
+                <div className="flex gap-8">
+                  <Link href={`/doctor/dashboard/patient_list/${patient.id}`}>
+                    <Button className="bg-indigo-700">Give Access</Button>
+                  </Link>
+                  <Link href={`/doctor/dashboard/patient_list/${patient.id}`}>
+                    <Button className="bg-red-600">Remove Request</Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
           ))}

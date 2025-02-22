@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 function PatientLoginForm() {
   const [username, setUsername] = useState("");
@@ -50,16 +51,18 @@ function PatientLoginForm() {
         />
       </div>
       <div>
-        <Button
-          type="submit"
-          className="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 transition-all"
-        >
-          Sign in as Patient
-        </Button>
+        <Link href="/patient/dashboard">
+          <Button
+            type="submit"
+            className="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 transition-all"
+          >
+            Sign in as Patient
+          </Button>
+        </Link>
       </div>
       <p className="mt-4 text-center text-sm text-gray-600">
         Don't have an account?{" "}
-        <a href="/signup" className="text-indigo-600 hover:underline">
+        <a href="/patient/register" className="text-indigo-600 hover:underline">
           Sign up here
         </a>
       </p>

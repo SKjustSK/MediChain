@@ -2,6 +2,7 @@
 
 import type React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -50,16 +51,18 @@ function DoctorLoginForm() {
         />
       </div>
       <div>
-        <Button
-          type="submit"
-          className="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 transition-all"
-        >
-          Sign in as Doctor
-        </Button>
+        <Link href="/doctor/dashboard/">
+          <Button
+            type="submit"
+            className="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 transition-all"
+          >
+            Sign in as Doctor
+          </Button>
+        </Link>
       </div>
       <p className="mt-4 text-center text-sm text-gray-600">
         Don't have an account?{" "}
-        <a href="/signup" className="text-indigo-600 hover:underline">
+        <a href="/doctor/register" className="text-indigo-600 hover:underline">
           Sign up here
         </a>
       </p>

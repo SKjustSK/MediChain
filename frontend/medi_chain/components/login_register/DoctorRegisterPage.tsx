@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 function DoctorRegisterForm() {
   const [formData, setFormData] = useState({
@@ -175,12 +176,23 @@ function DoctorRegisterForm() {
       </div>
 
       <div className="mt-4">
-        <Button
-          type="submit"
-          className="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 transition-all"
-        >
-          Register as Doctor
-        </Button>
+        <Link href="/doctor/dashboard">
+          <Button
+            type="submit"
+            className="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 transition-all"
+          >
+            Register as Doctor
+          </Button>
+        </Link>
+        <p className="mt-4 text-center text-sm text-gray-600">
+          Already have an account?{" "}
+          <a
+            href="/doctor/register"
+            className="text-indigo-600 hover:underline"
+          >
+            Log in here
+          </a>
+        </p>
       </div>
     </form>
   );
