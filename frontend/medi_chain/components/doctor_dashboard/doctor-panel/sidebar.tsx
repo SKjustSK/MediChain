@@ -15,7 +15,7 @@ export function Sidebar() {
   return (
     <aside
       className={cn(
-        "fixed top-0 left-0 z-20 h-screen -translate-x-full lg:translate-x-0 transition-[width] ease-in-out duration-300",
+        "fixed bg-gray-900 text-zinc-50 top-0 left-0 z-20 h-screen -translate-x-full lg:translate-x-0 transition-[width] ease-in-out duration-300",
         !getOpenState() ? "w-[90px]" : "w-72",
         settings.disabled && "hidden"
       )}
@@ -28,7 +28,7 @@ export function Sidebar() {
       >
         <Button
           className={cn(
-            "transition-transform ease-in-out duration-300 mb-1",
+            "text-zinc-50 transition-transform ease-in-out duration-300 mb-1",
             !getOpenState() ? "translate-x-1" : "translate-x-0"
           )}
           variant="link"
@@ -38,7 +38,7 @@ export function Sidebar() {
             <PanelsTopLeft className="w-6 h-6 mr-1" />
             <h1
               className={cn(
-                "font-bold text-lg whitespace-nowrap transition-[transform,opacity,display] ease-in-out duration-300",
+                "font-bold text-2xl whitespace-nowrap transition-[transform,opacity,display] ease-in-out duration-300",
                 !getOpenState()
                   ? "-translate-x-96 opacity-0 hidden"
                   : "translate-x-0 opacity-100"

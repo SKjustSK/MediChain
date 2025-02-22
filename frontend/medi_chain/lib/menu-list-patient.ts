@@ -30,14 +30,14 @@ type Group = {
 export function getMenuList(pathname: string): Group[] {
   return [
     {
-      groupLabel: "Patient Dashboard",
+      groupLabel: "",
       menus: [
-        // {
-        //   href: "/patient/dashboard/",
-        //   label: "Patient Dashboard",
-        //   icon: LayoutGrid,
-        //   submenus: [],
-        // },
+        {
+          href: "/patient/dashboard/",
+          label: "Patient Dashboard",
+          icon: LayoutGrid,
+          submenus: [],
+        },
       ],
     },
     {
@@ -66,6 +66,11 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/patient/dashboard/view_doctors",
           label: "View Doctors",
+          icon: Tag,
+        },
+        {
+          href: "/patient/dashboard/access_requests",
+          label: "Access requests",
           icon: Tag,
         },
       ],
