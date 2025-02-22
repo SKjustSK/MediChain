@@ -1,2 +1,2 @@
-import LandingPage from "../components/landing/LandingPage";
-export default LandingPage;
+import Images from "@/components/landing/Footer";
+export default Images;
