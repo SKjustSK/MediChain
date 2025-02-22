@@ -30,42 +30,42 @@ type Group = {
 export function getMenuList(pathname: string): Group[] {
   return [
     {
-      groupLabel: "",
+      groupLabel: "Patient Dashboard",
       menus: [
-        {
-          href: "/patient/dashboard/",
-          label: "Patient Dashboard",
-          icon: LayoutGrid,
-          submenus: [],
-        },
+        // {
+        //   href: "/patient/dashboard/",
+        //   label: "Patient Dashboard",
+        //   icon: LayoutGrid,
+        //   submenus: [],
+        // },
       ],
     },
     {
       groupLabel: "Contents",
       menus: [
+        // {
+        //   href: "",
+        //   label: "Posts",
+        //   icon: SquarePen,
+        //   submenus: [
+        //     {
+        //       href: "/posts",
+        //       label: "All Posts",
+        //     },
+        //     {
+        //       href: "/posts/new",
+        //       label: "New Post",
+        //     },
+        //   ],
+        // },
         {
-          href: "",
-          label: "Posts",
-          icon: SquarePen,
-          submenus: [
-            {
-              href: "/posts",
-              label: "All Posts",
-            },
-            {
-              href: "/posts/new",
-              label: "New Post",
-            },
-          ],
-        },
-        {
-          href: "/categories",
-          label: "Categories",
+          href: "/patient/dashboard/my_reports",
+          label: "My Reports",
           icon: Bookmark,
         },
         {
-          href: "/tags",
-          label: "Tags",
+          href: "/patient/dashboard/view_doctors",
+          label: "View Doctors",
           icon: Tag,
         },
       ],
@@ -73,11 +73,11 @@ export function getMenuList(pathname: string): Group[] {
     {
       groupLabel: "Settings",
       menus: [
-        {
-          href: "/users",
-          label: "Users",
-          icon: Users,
-        },
+        // {
+        //   href: "/users",
+        //   label: "Users",
+        //   icon: Users,
+        // },
         {
           href: "/account",
           label: "Account",
